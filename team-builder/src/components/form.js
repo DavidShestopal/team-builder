@@ -9,14 +9,7 @@ const Builder = props => {
   });
   const handleChanges = e => {
     console.log(teamplayer);
-    // console.log("the name", e.target.name)
-    // console.log("the event target", e.target)
-    //we are dynamically setting our keys.
-    // setNote({ ...note, title: e.target.value });
-    // setNote({ ...note, note: e.target.value });
-    //  const nameObj={...note}
-    //  nameObj[e.target.name]= e.target.value
-    // setNote(nameObj)
+
     setTeamplayer({
       ...teamplayer,
       [e.target.name]: e.target.value,
@@ -30,12 +23,13 @@ const Builder = props => {
   };
   return (
     <form onSubmit={submitForm}>
-      <label htmlFor="name">Name</label>
+      <label htmlFor="name">Name:</label>
       <input id="name" type="text" name="name" onChange={handleChanges} value={teamplayer.name} />
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email">Email:</label>
       <input id="email" name="email" onChange={handleChanges} value={teamplayer.email} />
-      <label htmlFor="role">Role</label>
+      <label htmlFor="role">Role:</label>
       <input id="role" name="role" onChange={handleChanges} value={teamplayer.role} />
+      <div className="filler"></div>
       <button type="submit">Add Team Player</button>
     </form>
   );

@@ -24,7 +24,7 @@ function App() {
   };
   return (
     <div className="App">
-      <h1> Team Players</h1>
+      <h1 style={{ color: '#2F4F4F' }}> Team Players</h1>
       <Builder addNewTeamPlayer={addNewTeamPlayer} />
       <Secondfor teamplayer={teamplayer} />
     </div>
